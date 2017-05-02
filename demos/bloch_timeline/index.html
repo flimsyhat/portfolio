@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset=utf-8>
+		<title>Bloch Sphere</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+
+	<body>
+
+		<div class="box">
+			<div id="container">
+<!--				<p id="label"><i>Click and drag to rotate</i></p>-->
+			</div>
+		</div>
+        <div id="sliders">
+<!--
+          <div>
+            <div id="labelContainer">
+              <h4 id="inputLabel">X</h4>
+            </div>
+            <input type="button" value="π/6" onclick="axis_rotation(x_axis, Math.PI/6)">
+            <input type="button" value="π/4" onclick="axis_rotation(x_axis, Math.PI/4)">
+            <input type="button" value="π/2" onclick="axis_rotation(x_axis, Math.PI/2)">
+            <input type="button" value="π" onclick="axis_rotation(x_axis, Math.PI)">
+          </div>
+           <div>
+            <div id="labelContainer">
+              <h4 id="inputLabel">Y</h4>
+            </div>
+            <input type="button" value="π/6" onclick="axis_rotation(y_axis, Math.PI/6)"> 
+            <input type="button" value="π/4" onclick="axis_rotation(y_axis, Math.PI/4)">
+            <input type="button" value="π/2" onclick="axis_rotation(y_axis, Math.PI/2)">
+            <input type="button" value="π" onclick="axis_rotation(y_axis, Math.PI)">
+          </div>
+          <div>
+            <div id="labelContainer">
+              <h4 id="inputLabel">Precession</h4>
+            </div>
+            <input type="button" value="Start" onclick="precession_start()">
+            <input type="button" value="Stop" onclick="precession_stop()">
+          </div>
+          <div>
+            <div id="labelContainer">
+              <h4 id="inputLabel">Reset</h4>
+            </div>
+            <input type="button" value="Reset" onclick="reset()">
+          </div>
+          <hr>
+-->
+          <div>
+             <div>
+              <div id="labelContainer">
+                  <h4 id="inputLabel">Pulses</h4>
+              </div>
+              <div class="image_container" id="pulses">
+                <img src="images/green_pulse.svg" id="green"></img>
+                <img src="images/orange_pulse.svg"></img>
+                <img src="images/pulse_bar.svg" class="first-image" id="bar"></img>
+              </div>
+            </div>
+            <div>
+              <div id="labelContainer">
+                  <h4 id="inputLabel">Adjust delay</h4>
+              </div>
+              <input type="range" id="delay" min="0" max="1" step=".01"/>
+            </div>
+            <div id="labelContainer">
+              <h4 id="inputLabel">Sequence</h4>
+            </div>
+            <input type="button" value="Run" onclick="sequence()">
+            <input type="button" value="Reset" onclick="reset()">
+          </div>
+          <div>
+            <div id="labelContainer">
+                <h4 id="inputLabel">Prob(0)</h4>
+            </div>
+            <div id="graph" class="image_container">
+              <img src="images/sine.svg"></img>
+              <img src="images/dot.svg" id="dot" class="first-image"></img>
+            </div>
+          </div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="js/three.min.js"></script>
+		<script src="js/OrbitControls.js"></script>
+        <script src="js/three-text2d.js"></script>
+        <script src="js/THREE.MeshLine.js"></script>
+		<script src="js/blochsphere.js"></script>
+
+	</body>
+
+</html>
